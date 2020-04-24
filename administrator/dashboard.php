@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -13,9 +14,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	<title>AdminLTE 3 | Starter</title>
 
 	<!-- Font Awesome Icons -->
-	<link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+	<link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
 	<!-- Theme style -->
-	<link rel="stylesheet" href="dist/css/adminlte.min.css">
+	<link rel="stylesheet" href="../dist/css/adminlte.min.css">
 	<!-- Google Font: Source Sans Pro -->
 	<link href="https://fonts.googleapis.com/css?family=Sarabun&display=swap" rel="stylesheet">
 	<style>
@@ -43,7 +44,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 		<aside class="main-sidebar sidebar-dark-primary elevation-4">
 			<!-- Brand Logo -->
 			<a href="index3.html" class="brand-link">
-				<img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+				<img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
 					style="opacity: .8">
 				<span class="brand-text font-weight-light">..........</span>
 			</a>
@@ -53,10 +54,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 				<!-- Sidebar user panel (optional) -->
 				<div class="user-panel mt-3 pb-3 mb-3 d-flex">
 					<div class="image">
-						<img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+						<img src="../dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
 					</div>
 					<div class="info">
-						<a href="#" class="d-block">..........</a>
+						<a href="#" class="d-block"><?= $_SESSION['user_full_name'] ?></a>
 					</div>
 				</div>
 
@@ -65,8 +66,48 @@ scratch. This page gets rid of all links and provides the needed markup only.
 					<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
 						data-accordion="false">
 						<!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-						<li class="nav-item has-treeview menu-open">
+			   with font-awesome or any other icon font library -->
+						<li class="nav-item">
+							<a href="user/user_show.php" class="nav-link">
+								<i class="fas fa-users"></i>
+								<p>
+									ผู้ใช้
+								</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">
+								<i class="nav-icon fas fa-th"></i>
+								<p>
+									ลูกค้า
+								</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">
+								<i class="nav-icon fas fa-th"></i>
+								<p>
+									กลุ่ม
+								</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">
+								<i class="nav-icon fas fa-th"></i>
+								<p>
+									กระทู้
+								</p>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="nav-link">
+								<i class="nav-icon fas fa-th"></i>
+								<p>
+									ข้อความ
+								</p>
+							</a>
+						</li>
+						<!-- <li class="nav-item has-treeview menu-open">
 							<a href="#" class="nav-link active">
 								<i class="nav-icon fas fa-tachometer-alt"></i>
 								<p>
@@ -97,7 +138,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 									<span class="right badge badge-danger">New</span>
 								</p>
 							</a>
-						</li>
+						</li> -->
 					</ul>
 				</nav>
 				<!-- /.sidebar-menu -->
@@ -112,12 +153,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
 				<div class="container-fluid">
 					<div class="row mb-2">
 						<div class="col-sm-6">
-							<h1 class="m-0 text-dark">Starter Page</h1>
+							<h1 class="m-0 text-dark">หน้าหลัก</h1>
 						</div><!-- /.col -->
 						<div class="col-sm-6">
 							<ol class="breadcrumb float-sm-right">
-								<li class="breadcrumb-item"><a href="#">Home</a></li>
-								<li class="breadcrumb-item active">Starter Page</li>
+								<!-- <li class="breadcrumb-item"><a href="administrator/dashboard.php">หน้าหลัก</a></li> -->
+								<li class="breadcrumb-item active">หน้าหลัก</li>
 							</ol>
 						</div><!-- /.col -->
 					</div><!-- /.row -->
@@ -129,7 +170,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 			<div class="content">
 				<div class="container-fluid">
 					<div class="row">
-						
+
 					</div>
 					<!-- /.row -->
 				</div><!-- /.container-fluid -->
@@ -164,11 +205,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 	<!-- REQUIRED SCRIPTS -->
 
 	<!-- jQuery -->
-	<script src="plugins/jquery/jquery.min.js"></script>
+	<script src="../plugins/jquery/jquery.min.js"></script>
 	<!-- Bootstrap 4 -->
-	<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 	<!-- AdminLTE App -->
-	<script src="dist/js/adminlte.min.js"></script>
+	<script src="../dist/js/adminlte.min.js"></script>
 </body>
 
 </html>
