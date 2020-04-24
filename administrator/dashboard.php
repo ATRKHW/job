@@ -69,15 +69,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
 			   with font-awesome or any other icon font library -->
 						<li class="nav-item">
 							<a href="user/user_show.php" class="nav-link">
-								<i class="fas fa-users"></i>
+								<i class="fas fa-user"></i>
 								<p>
 									ผู้ใช้
 								</p>
 							</a>
 						</li>
 						<li class="nav-item">
-							<a href="#" class="nav-link">
-								<i class="nav-icon fas fa-th"></i>
+							<a href="customer/customer_show.php" class="nav-link">
+							<i class="fas fa-user-tie"></i>
 								<p>
 									ลูกค้า
 								</p>
