@@ -54,7 +54,7 @@
                     </div>
                     <div class="row">
                         <div class="col-6">
-                            <button type="submit" class="btn btn-link btn-block">สมัครสมาชิก</button>
+                            <a href="register.php" class="btn btn-link btn-block">สมัครสมาชิก</a>
                         </div>
                         <!-- /.col -->
                         <div class="col-6">
