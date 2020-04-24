@@ -73,7 +73,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <!-- Add icons to the links using the .nav-icon class
 			   with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="administrator/user/user_show.php" class="nav-link active">
+                            <a href="user_show.php" class="nav-link active">
                                 <i class="fas fa-users"></i>
                                 <p>
                                     ผู้ใช้
@@ -112,6 +112,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </p>
                             </a>
                         </li>
+                        <li class="nav-item">
+							<a href="../../logout.php" class="nav-link">
+								<i class="nav-icon fas fa-th"></i>
+								<p>
+									ออกจากระบบ
+								</p>
+							</a>
+						</li>
                         <!-- <li class="nav-item has-treeview menu-open">
 							<a href="#" class="nav-link active">
 								<i class="nav-icon fas fa-tachometer-alt"></i>
@@ -201,6 +209,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                 <th>รหัสผ่าน</th>
                                                 <th>ชื่อ - สกุล</th>
                                                 <th>ระดับ</th>
+                                                <th>สถานะ</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -211,7 +220,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                 <td><?= $result['username'] ?></td>
                                                 <td><?= $result['user_password'] ?></td>
                                                 <td><?= $result['user_full_name'] ?></td>
-                                                <td><?= $result['user_role'] ?></td>
+                                                <td><?= $retVal = ($result['user_role'] == 1) ? 'admin' : 'membership' ; ?></td>
+                                                <td><?= $retVal = ($result['user_status'] == 1) ? 'เปิดใช้งาน' : 'ปิดการใช้งาน' ; ?></td>
                                                 <td>
                                                     <a class="btn btn-info" href="user_form_update.php?user_id=<?= $result['user_id'] ?>">แก้ไข</a>
                                                     <a class="btn btn-danger" href="user_delete.php?user_id=<?= $result['user_id'] ?>">ลบ</a>

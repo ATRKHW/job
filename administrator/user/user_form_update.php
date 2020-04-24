@@ -75,7 +75,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <!-- Add icons to the links using the .nav-icon class
 			   with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="administrator/user/user_show.php" class="nav-link active">
+                            <a href="user_show.php" class="nav-link active">
                                 <i class="fas fa-users"></i>
                                 <p>
                                     ผู้ใช้
@@ -209,6 +209,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                 <select name="user_role" id="" class="form-control">
                                                     <option value="1" <?= $retVal = ($result['user_role'] == 1) ? 'selected' : '' ; ?>>admin</option>
                                                     <option value="2" <?= $retVal = ($result['user_role'] == 2) ? 'selected' : '' ; ?>>membership</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputPassword3" class="col-sm-2 col-form-label">ระดับ</label>
+                                            <div class="col-sm-10">
+                                                <select name="user_status" id="" class="form-control">
+                                                    <option value="1" <?= $retVal = ($result['user_status'] == 1) ? 'selected' : '' ; ?>>เปิดการใช้งาน</option>
+                                                    <option value="2" <?= $retVal = ($result['user_status'] == 2) ? 'selected' : '' ; ?>>ปิดการใช้งาน</option>
                                                 </select>
                                             </div>
                                         </div>
