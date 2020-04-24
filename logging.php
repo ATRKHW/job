@@ -1,17 +1,17 @@
 <?php
 	include 'connection.php';
 	session_start();
-	$username = mysqli_real_escape_string($conn, $_POST['username']);
-	$pwd = mysqli_real_escape_string($conn, $_POST['pwd']);
-	$sql = "SELECT username, pwd, fullname FROM users WHERE username = '".$username."' AND pwd ='".$pwd."'";
+	echo $username = mysqli_real_escape_string($conn, $_POST['username']);
+	echo $user_password = mysqli_real_escape_string($conn, $_POST['user_password']);
+	$sql = "SELECT username, user_password, user_full_name FROM users WHERE username = '".$username."' AND user_password ='".$user_password."'";
 	$query = mysqli_query($conn, $sql);
 	$result = mysqli_fetch_array($query);
 	if(!$result)
 	{
-		header("Location: login.php");
+		header("location: login.php");
 	} else {
-		$_SESSION['username'] = $result["username"];
-		header("location: index.php");
+		$_SESSION['user_full_name'] = $result["user_full_name"];
+		header("location: dashboard.php");
 	}
 	mysqli_close($conn);
 ?>
