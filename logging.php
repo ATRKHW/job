@@ -15,7 +15,7 @@
 			$_SESSION['user_full_name'] = $result["user_full_name"];
 			switch ($result["user_role"]) {
 				case 1:
-					header("location: administrator/dashboard.php");
+					header("location: administrator/index.php?p=dashboard");
 					break;
 				case 2:
 					header("location: dashboard.php");

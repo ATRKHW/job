@@ -8,5 +8,5 @@
 	$sql = "UPDATE users SET user_password = '".$user_password."', user_full_name = '".$user_full_name."', user_role = '".$user_role."', user_status = '".$user_status."' WHERE user_id = '".$user_id."'";
 	$query = mysqli_query($conn, $sql);
 	mysqli_close($conn);
-	header('location: user_show.php');
+	header('location: ../index.php?p=user');
 ?>
