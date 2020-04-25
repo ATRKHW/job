@@ -31,3 +31,7 @@
 		<!-- /.content -->
 	</div>
 	<!-- /.content-wrapper -->
+</div>
+<?php
+	require 'script.php';
+?>

@@ -28,7 +28,7 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="login.php">ระบบ..........</a>
+            <a href="login.php"></a>
         </div>
         <!-- /.login-logo -->
         <div class="card">
@@ -40,7 +40,7 @@
                         <input type="text" class="form-control" placeholder="ชื่อผู้ใช้" name="username">
                         <div class="input-group-append">
                             <div class="input-group-text">
-                                <span class="fas fa-envelope"></span>
+                                <span class="fas fa-user"></span>
                             </div>
                         </div>
                     </div>
@@ -54,7 +54,7 @@
                     </div>
                     <div class="row">
                         <div class="col-6">
-                            <a href="register.php" class="btn btn-link btn-block">สมัครสมาชิก</a>
+                            <a href="register.php" class="btn btn-light btn-block">สมัครสมาชิก</a>
                         </div>
                         <!-- /.col -->
                         <div class="col-6">

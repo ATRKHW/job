@@ -4,7 +4,7 @@
     <a href="index3.html" class="brand-link">
         <img src="../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
             style="opacity: .8">
-        <span class="brand-text font-weight-light">..........</span>
+        <span class="brand-text font-weight-light">.</span>
     </a>
 
     <!-- Sidebar -->
@@ -51,17 +51,40 @@
                 <li class="nav-item">
                     <a href="?p=post" class="nav-link" id="post">
                         <i class="fas fa-blog nav-icon"></i>
-                            กระทู้
+                        กระทู้
                         </p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link" id="">
+                <!-- <li class="nav-item">
+                    <a href="?p=message" class="nav-link" id="message">
                         <i class="fas fa-inbox nav-icon"></i>
                         <p>
                             ข้อความ
                         </p>
                     </a>
+                </li> -->
+                <li class="nav-item has-treeview" id="treeview">
+                    <a href="#" class="nav-link" id="message">
+                        <i class="nav-icon fas fa-inbox"></i>
+                        <p>
+                            ข้อความ
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview" style="display: none;">
+                        <li class="nav-item">
+                            <a href="?p=message-in" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>ข้อความเข้า</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="?p=message" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>ข้อความออก</p>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
                 <li class="nav-item">
                     <a href="../logout.php" class="nav-link">

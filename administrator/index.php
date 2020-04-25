@@ -58,6 +58,15 @@
             case 'post-delete':
                 include 'post/post_delete.php';
                 break;
+            case 'message':
+                include 'message/message_show.php';
+                break;
+            case 'message-in':
+                include 'message/message_in.php';
+                break;
+            case 'message-delete':
+                include 'message/message_delete.php';
+                break;
         }
     }
     else {

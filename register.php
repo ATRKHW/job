@@ -28,7 +28,7 @@
 <body class="hold-transition register-page">
 	<div class="register-box">
 		<div class="register-logo">
-			<a href="#">ระบบ..........</a>
+			<a href="#"></a>
 		</div>
 
 		<div class="card">
@@ -37,10 +37,10 @@
 
 				<form action="registering.php" method="post">
 					<div class="input-group mb-3">
-						<input type="text" class="form-control" placeholder="ชื่อ - สกุล" name="user_full_name">
+						<input type="text" class="form-control" placeholder="ชื่อ - นามสกุล" name="user_full_name">
 						<div class="input-group-append">
 							<div class="input-group-text">
-								<span class="fas fa-user"></span>
+								<span class="fas fa-id-card-alt"></span>
 							</div>
 						</div>
 					</div>
@@ -48,7 +48,7 @@
 						<input type="text" class="form-control" placeholder="ชื่อบัญชีผู้ใช้" name="username">
 						<div class="input-group-append">
 							<div class="input-group-text">
-								<span class="fas fa-envelope"></span>
+								<span class="fas fa-user"></span>
 							</div>
 						</div>
 					</div>
@@ -62,11 +62,11 @@
 					</div>
 					<div class="row">
 						<div class="col-6">
-							<a href="login.php" class="btn btn-link btn-block">ยกเลิก</a>
+							<a href="login.php" class="btn btn-light btn-block">ยกเลิก</a>
 						</div>
 						<!-- /.col -->
 						<div class="col-6">
-							<button type="submit" class="btn btn-success btn-block">บันทึก</button>
+							<button type="submit" class="btn btn-success btn-block">ตกลง</button>
 						</div>
 						<!-- /.col -->
 					</div>

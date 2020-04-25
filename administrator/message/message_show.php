@@ -1,8 +1,7 @@
 <?php
     include '../connection.php';
-    $group_id = $_GET['group_id'];
-    $group_name = $_GET['group_name'];
-    $sql = "SELECT * FROM users";
+    $user_sender_id = $_SESSION['user_id'];
+    $sql = "SELECT messages.message_id AS message_id, messages.message_description AS message_description, users.user_full_name AS reciever FROM messages INNER JOIN users ON messages.user_reciever_id = users.user_id WHERE user_sender_id = '".$user_sender_id."'";
     $query = mysqli_query($conn, $sql);
 ?>
 <!-- Content Wrapper. Contains page content -->
@@ -10,14 +9,14 @@
     <!-- Content Header (Page header) -->
     <div class="content-header">
         <div class="container-fluid">
-            <div class="row mb-2">
+            <div class="row mb-2">  
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">กลุ่ม <?= $group_name ?></h1>
+                    <h1 class="m-0 text-dark">ข้อความ</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="../dashboard.php">หน้าหลัก</a></li>
-                        <li class="breadcrumb-item active">กลุ่ม <?= $group_name ?></li>
+                        <li class="breadcrumb-item active">ข้อความ</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -32,7 +31,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">รายชื่อ</h3>
+                            <h3 class="card-title">ข้อความ</h3>
 
                             <div class="card-tools">
                                 <div class="input-group input-group-sm" style="width: 150px;">
@@ -51,7 +50,8 @@
                             <table class="table table-hover text-nowrap">
                                 <thead>
                                     <tr>
-                                        <th>ชื่อบัญชีผู้ใช้</th>
+                                        <th>รายละเอียด</th>
+                                        <th>ผู้รับ</th>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -60,11 +60,10 @@
                                         while ($result = mysqli_fetch_array($query)) {
                                     ?>
                                     <tr>
-                                        <td><?= $result['username'] ?></td>
-                                        <td>
-                                            <a class="btn btn-success"
-                                                href="?p=group-add-member&user_id=<?= $result['user_id'] ?>&group_id=<?= $group_id ?>">เพิ่ม</a>
+                                        <td><?= $result['message_description'] ?></td>
+                                        <td><?= $result['reciever'] ?></td>
                                         </td>
+                                        <td><a class="btn btn-danger btn-sm" href="?p=message-delete&message_id=<?= $result['message_id'] ?>">ลบ</a></td>
                                     </tr>
                                     <?php
                                         }
@@ -90,6 +89,6 @@
 
 <script>
     $(document).ready(function () {
-        $('#group').addClass('active')
+        $('#message').addClass('active')
     })
 </script>

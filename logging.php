@@ -18,7 +18,7 @@
 					header("location: administrator/index.php?p=dashboard");
 					break;
 				case 2:
-					header("location: dashboard.php");
+					header("location: index.html");
 					break;
 				
 				default:

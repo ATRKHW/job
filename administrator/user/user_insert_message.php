@@ -7,5 +7,5 @@
 	$sql = "INSERT INTO messages (message_description, user_sender_id, user_reciever_id) VALUES ('".$message_description."', '".$user_sender_id."', '".$user_reciever_id."')";
 	$query = mysqli_query($conn, $sql);
 	mysqli_close($conn);
-	// header('location: message/message_show.php');
+	header('location: ../index.php?p=message');
 ?>
