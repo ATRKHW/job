@@ -17,7 +17,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="../dashboard.php">หน้าหลัก</a></li>
-                        <li class="breadcrumb-item active">แก้ไขลูกค้า</li>
+                        <li class="breadcrumb-item active">ส่งข้อความ</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -32,11 +32,10 @@
                 <div class="col-md-12">
                     <div class="card card-info">
                         <!-- form start -->
-                        <form action="customer_insert_message.php" method="post" class="form-horizontal">
+                        <form action="user/user_insert_message.php" method="post" class="form-horizontal">
                             <div class="card-body">
                                 <div class="form-group row">
-                                    <label for="inputPassword3" class="col-sm-3 col-form-label">ชื่อ -
-                                        สกุล</label>
+                                    <label for="inputPassword3" class="col-sm-3 col-form-label">ส่งข้อความถึง</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control-plaintext" name="customer_name"
                                             value="<?= $result['user_full_name'] ?>">
@@ -48,7 +47,7 @@
                                         <textarea class="form-control" rows="3" name="message_description"></textarea>
                                     </div>
                                 </div>
-                                <input type="hidden" name="user_id" value="<?= $_SESSION['user_id'] ?>">
+                                <input type="hidden" name="user_id" value="<?= $user_id ?>">
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer">

@@ -4,5 +4,5 @@
 	$sql = "INSERT INTO categories (category_name) VALUES ('".$category_name."')";
 	$query = mysqli_query($conn, $sql);
 	mysqli_close($conn);
-	header('location: category_show.php');
+	header('location: ../index.php?p=group');
 ?>

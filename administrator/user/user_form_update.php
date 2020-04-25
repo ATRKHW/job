@@ -69,14 +69,14 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="inputPassword3" class="col-sm-2 col-form-label">ระดับ</label>
+                                    <label for="inputPassword3" class="col-sm-2 col-form-label">สถานะ</label>
                                     <div class="col-sm-10">
                                         <select name="user_status" id="" class="form-control">
                                             <option value="1"
                                                 <?= $retVal = ($result['user_status'] == 1) ? 'selected' : '' ; ?>>
                                                 เปิดการใช้งาน</option>
                                             <option value="2"
-                                                <?= $retVal = ($result['user_status'] == 2) ? 'selected' : '' ; ?>>
+                                                <?= $retVal = ($result['user_status'] == 0) ? 'selected' : '' ; ?>>
                                                 ปิดการใช้งาน</option>
                                         </select>
                                     </div>

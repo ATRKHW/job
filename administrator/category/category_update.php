@@ -5,5 +5,5 @@
 	$sql = "UPDATE categories SET category_name = '".$category_name."' WHERE category_id = '".$category_id."'";
 	$query = mysqli_query($conn, $sql);
 	mysqli_close($conn);
-	header('location: category_show.php');
+	header('location: ../index.php?p=group');
 ?>

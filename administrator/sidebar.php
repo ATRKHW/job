@@ -41,7 +41,7 @@
                     </a>
                 </li> -->
                 <li class="nav-item">
-                    <a href="?p=" class="nav-link">
+                    <a href="?p=group" class="nav-link" id="group">
                         <i class="fas fa-users nav-icon"></i>
                         <p>
                             กลุ่ม

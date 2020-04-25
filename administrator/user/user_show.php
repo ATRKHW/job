@@ -50,9 +50,9 @@
                                 <thead>
                                     <tr>
                                         <th>ชื่อบัญชีผู้ใช้</th>
-                                        <th>รหัสผ่าน</th>
                                         <th>ชื่อ - สกุล</th>
                                         <th>ระดับ</th>
+                                        <th>กลุ่ม</th>
                                         <th>สถานะ</th>
                                         <th></th>
                                     </tr>
@@ -63,14 +63,18 @@
                                     ?>
                                     <tr>
                                         <td><?= $result['username'] ?></td>
-                                        <td><?= $result['user_password'] ?></td>
                                         <td><?= $result['user_full_name'] ?></td>
                                         <td><?= $retVal = ($result['user_role'] == 1) ? 'admin' : 'membership' ; ?></td>
+                                        <td><?= $result['user_group'] ?></td>
                                         <td><?= $retVal = ($result['user_status'] == 1) ? 'เปิดใช้งาน' : 'ปิดการใช้งาน' ; ?>
                                         </td>
                                         <td>
-                                            <a class="btn btn-primary btn-sm"
-                                                href="?p=user-message&user_id=<?= $result['user_id'] ?>">ข้อความ</a>
+                                            <?php
+                                                if ($result['user_full_name'] != $_SESSION['user_full_name']) {
+                                                    $user_id = $result['user_id'];
+                                                    echo '<a class="btn btn-primary btn-sm" href="?p=user-message&user_id=' . $user_id . '">ข้อความ</a>';
+                                                }
+                                            ?>
                                             <a class="btn btn-info btn-sm"
                                                 href="?p=user-edit&user_id=<?= $result['user_id'] ?>">แก้ไข</a>
                                             <a class="btn btn-danger btn-sm"
