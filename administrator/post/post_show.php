@@ -10,7 +10,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">กระทู้ <a href="?p=post-category_form_insert.php" class="btn btn-success"><i
+                    <h1 class="m-0 text-dark">กระทู้ <a href="?p=post-create" class="btn btn-success"><i
                                 class="fas fa-plus"></i></a></h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
@@ -51,8 +51,6 @@
                                 <thead>
                                     <tr>
                                         <th>เรื่อง</th>
-                                        <th>รายละเอียด</th>
-                                        <th>รูปภาพ</th>
                                         <th></th>
                                     </tr>
                                 </thead>
@@ -62,12 +60,9 @@
                                             ?>
                                     <tr>
                                         <td><?= $result['post_topic'] ?></td>
-                                        <td><?= $result['post_description'] ?></td>
-                                        <td><img width="150" height="150" src="<?= $result['post_image'] ?>" alt="">
-                                        </td>
                                         <td>
                                             <a class="btn btn-danger"
-                                                href="post_delete.php?post_id=<?= $result['post_id'] ?>">ลบ</a>
+                                                href="?p=post-delete&post_id=<?= $result['post_id'] ?>">ลบ</a>
                                         </td>
                                     </tr>
                                     <?php

@@ -52,6 +52,12 @@
             case 'post':
                 include 'post/post_show.php';
                 break;
+            case 'post-create':
+                include 'post/post_form_insert.php';
+                break;
+            case 'post-delete':
+                include 'post/post_delete.php';
+                break;
         }
     }
     else {

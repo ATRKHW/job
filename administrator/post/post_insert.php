@@ -1,5 +1,4 @@
 <?php
-	session_start();
     include '../../connection.php';
 	$post_topic = $_POST['post_topic'];
 	$post_description = $_POST['post_description'];
@@ -12,5 +11,5 @@
 	$sql = "INSERT INTO posts (post_topic, post_description, post_image, user_id) VALUES ('".$post_topic."', '".$post_description."', '".$target_file."', '".$user_id."')";
 	$query = mysqli_query($conn, $sql);
 	mysqli_close($conn);
-	header('location: post_show.php');
+	header('location: ../index.php?p=post');
 ?>
